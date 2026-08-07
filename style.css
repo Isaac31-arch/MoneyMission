@@ -1,5 +1,5 @@
 body {
-    background-color: lightblue;
+    background: linear-gradient(135deg, #FFF8CC, #FFE066, #FFC94A);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,5 +11,22 @@ body {
 h1 {
     font-size: 60px;
     color: darkgreen;
-    margin-bottom: 10px;
+    margin-top: -40px;
+}
+
+button {
+    background-color: #2E7D32;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 10px;
+}
+
+#logo {
+    width: 900px;
+    margin-bottom: 20px;
+    height: 650px;
 }
