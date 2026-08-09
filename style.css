@@ -1,17 +1,23 @@
 body {
     background: linear-gradient(135deg, #FFF8CC, #FFE066, #FFC94A);
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#main-menu {
+    min-height: 100vh;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    font-family: Arial, sans-serif;
+    text-align: center;
 }
 
 h1 {
     font-size: 60px;
     color: darkgreen;
-    margin-top: -40px;
+    margin-top: 10px;
 }
 
 button {
@@ -26,7 +32,26 @@ button {
 }
 
 #logo {
-    width: 900px;
+    width: 800px;
+    max-width: 80%;
     margin-bottom: 20px;
-    height: 650px;
+    height: auto;
+}
+
+#game-screen {
+    display: none;
+    text-align: center;
+}
+
+.tagline {
+    font-size: 32px;
+    font-weight: bold;
+    color: linear-gradient(to right, #1B5E20, #43A047, #D89B00);
+    background-clip: text;
+    color: transparent;
+    margin: 10px 0 35px;
+}
+
+button:hover {
+    background-color: #1B5E20;
 }
