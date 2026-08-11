@@ -22,28 +22,37 @@ spendButton.addEventListener("click", spendMoney);
 giveButton.addEventListener("click", giveMoney);
 investButton.addEventListener("click", investMoney);
 
+let savingsDisplay = document.getElementById("savings-display");
+let spendingDisplay = document.getElementById("spending-display");
+let givingDisplay = document.getElementById("giving-display");
+let investmentsDisplay = document.getElementById("investments-display");
+
 function saveMoney() {
     money = money -5;
     savings = savings + 5;
     moneyDisplay.textContent = money;
+    savingsDisplay.textContent = savings;
 }
 
 function spendMoney() {
     money = money - 5;
     spending = spending + 5;
     moneyDisplay.textContent = money;
+    spendingDisplay.textContent = spending;
 }
 
 function giveMoney() {
     money = money - 5;
     giving = giving + 5;
     moneyDisplay.textContent = money;
+    givingDisplay.textContent = giving;
 }
 
 function investMoney() {
     money = money - 5;
     investments = investments + 5;
     moneyDisplay.textContent = money;
+    investmentsDisplay.textContent = investments;
 }
 
 function startGame() {
