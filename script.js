@@ -28,31 +28,39 @@ let givingDisplay = document.getElementById("giving-display");
 let investmentsDisplay = document.getElementById("investments-display");
 
 function saveMoney() {
-    money = money -5;
-    savings = savings + 5;
-    moneyDisplay.textContent = money;
-    savingsDisplay.textContent = savings;
+    if (money >= 5) {
+        money = money - 5;
+        savings = savings + 5;
+        moneyDisplay.textContent = money;
+        savingsDisplay.textContent = savings;
+    }
 }
 
 function spendMoney() {
-    money = money - 5;
-    spending = spending + 5;
-    moneyDisplay.textContent = money;
-    spendingDisplay.textContent = spending;
+    if (money >= 5) {
+        money = money - 5;
+        spending = spending + 5;
+        moneyDisplay.textContent = money;
+        spendingDisplay.textContent = spending;
+    }
 }
 
 function giveMoney() {
-    money = money - 5;
-    giving = giving + 5;
-    moneyDisplay.textContent = money;
-    givingDisplay.textContent = giving;
+    if (money >= 5) {
+        money = money - 5;
+        giving = giving + 5;
+        moneyDisplay.textContent = money;
+        givingDisplay.textContent = giving;
+    }
 }
 
 function investMoney() {
-    money = money - 5;
-    investments = investments + 5;
-    moneyDisplay.textContent = money;
-    investmentsDisplay.textContent = investments;
+    if (money >= 5) {
+        money = money - 5;
+        investments = investments + 5;
+        moneyDisplay.textContent = money;
+        investmentsDisplay.textContent = investments;
+    }
 }
 
 function startGame() {
