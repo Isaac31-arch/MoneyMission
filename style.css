@@ -74,3 +74,9 @@ button:active {
     align-items: center;
     gap: 25px;
 }
+
+#menu-button {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+}
