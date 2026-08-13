@@ -35,6 +35,11 @@ finishButton.addEventListener("click", finishWeek);
 function finishWeek() {
     nextWeekButton.style.display = "inline-block";
     finishButton.style.display = "none";
+
+    saveButton.disabled = true;
+    spendButton.disabled = true;
+    giveButton.disabled = true;
+    investButton.disabled = true;
 }
 function saveMoney() {
     if (money >= 5) {
