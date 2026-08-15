@@ -31,6 +31,20 @@ spendButton.addEventListener("click", spendMoney);
 giveButton.addEventListener("click", giveMoney);
 investButton.addEventListener("click", investMoney);
 finishButton.addEventListener("click", finishWeek);
+nextWeekButton.addEventListener("click", nextWeek);
+
+function nextWeek() {
+    week = week + 1;
+    weekDisplay.textContent = week;
+
+    saveButton.disabled = false;
+    spendButton.disabled = false;
+    giveButton.disabled = false;
+    investButton.disabled = false;
+
+    nextWeekButton.style.display = "none";
+    finishButton.style.display = "inline-block";
+}
 
 function finishWeek() {
     nextWeekButton.style.display = "inline-block";
