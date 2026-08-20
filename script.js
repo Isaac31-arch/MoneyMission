@@ -58,6 +58,7 @@ let givingDisplay = document.getElementById("giving-display");
 let investmentsDisplay = document.getElementById("investments-display");
 let finishButton = document.getElementById("finish-button");
 let weekDisplay = document.getElementById("week-display");
+let eventDisplay = document.getElementById("event-display");
 
 startButton.addEventListener("click", startGame);
 menuButton.addEventListener("click", returnToMenu);
@@ -72,7 +73,7 @@ function pickRandomEvent() {
     let randomNumber = Math.floor(Math.random() * events.length);
     let randomEvent = events[randomNumber];
 
-    console.log(randomEvent);
+    eventDisplay.textContent = randomEvent;
 }
 
 pickRandomEvent();
