@@ -76,8 +76,6 @@ function pickRandomEvent() {
     eventDisplay.textContent = randomEvent;
 }
 
-pickRandomEvent();
-
 function nextWeek() {
     week = week + 1;
     weekDisplay.textContent = week;
@@ -89,6 +87,10 @@ function nextWeek() {
 
     nextWeekButton.style.display = "none";
     finishButton.style.display = "inline-block";
+
+    if (week > 1) {
+        pickRandomEvent();
+    }
 }
 
 function finishWeek() {

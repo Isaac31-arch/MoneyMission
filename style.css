@@ -81,3 +81,11 @@ button:active {
     bottom: 25px;
     right: 25px;
 }
+
+#event-box {
+    border: 4px solid #F2B705;
+    border-radius: 18px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+}
