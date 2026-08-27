@@ -15,41 +15,6 @@ let giveButton = document.getElementById("give-button");
 let investButton = document.getElementById("invest-button");
 let moneyDisplay = document.getElementById("money-display");
 let nextWeekButton = document.getElementById("next-week-button");
-let events = [
-    "🎂 Birthday gift! You received $10.",
-    "💵 Extra allowance! You received $5.",
-    "🧹 You did extra chores and earned $10.",
-    "🎮 You sold an old game for $8.",
-    "🪙 You found $3 in your room.",
-    "🏆 You won a school contest and earned $15.",
-
-    "🚲 Your bike needs a repair. Pay $5.",
-    "🎧 Your headphones broke. Pay $10.",
-    "📚 You need school supplies. Pay $5.",
-    "🍕 You went out for food. Pay $5.",
-    "🎟️ You bought a movie ticket. Pay $10.",
-    "🚌 You need transportation money. Pay $5.",
-
-    "📈 Your investment increased by $5.",
-    "📈 Your investment increased by $10.",
-    "📉 Your investment lost $5.",
-    "💰 Your investment paid you a $3 bonus.",
-
-    "🎁 A friend has a fundraiser. Do you want to give $5?",
-    "🐶 An animal shelter is collecting donations. Give $5?",
-    "🌳 Your school is raising money for a community garden. Give $5?",
-
-    "👟 New shoes are on sale for $10. Buy them?",
-    "🎮 A new game costs $15. Buy it?",
-    "🍦 Your friends are getting ice cream for $5. Join them?",
-    "📱 A phone accessory you want costs $10. Buy it?",
-
-    "🎉 No unexpected expenses this week!",
-    "🎟️ You received a free movie ticket!",
-    "🍪 Someone gave you a free snack.",
-    "🏦 Your savings earned a $2 bonus.",
-    "💸 You received $5 cashback."
-];
 moneyDisplay.textContent = money;
 
 let savingsDisplay = document.getElementById("savings-display");
@@ -73,7 +38,17 @@ function pickRandomEvent() {
     let randomNumber = Math.floor(Math.random() * events.length);
     let randomEvent = events[randomNumber];
 
-    eventDisplay.textContent = randomEvent;
+    eventDisplay.textContent = randomEvent.text;
+
+    if (randomEvent.type === "income") {
+        money = money + randomEvent.amount;
+    }
+
+    if (randomEvent.type === "expense") {
+        money = money - randomEvent.amount;
+    }
+
+    moneyDisplay.textContent = money;
 }
 
 function nextWeek() {
