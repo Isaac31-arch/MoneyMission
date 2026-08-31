@@ -24,6 +24,7 @@ let investmentsDisplay = document.getElementById("investments-display");
 let finishButton = document.getElementById("finish-button");
 let weekDisplay = document.getElementById("week-display");
 let eventDisplay = document.getElementById("event-display");
+let incomeMessage = document.getElementById("income-message");
 
 startButton.addEventListener("click", startGame);
 menuButton.addEventListener("click", returnToMenu);
@@ -42,6 +43,7 @@ function pickRandomEvent() {
 
     if (randomEvent.type === "income") {
         money = money + randomEvent.amount;
+        incomeMessage.textContent = `You received $${randomEvent.amount}!`;
     }
 
     if (randomEvent.type === "expense") {
@@ -54,6 +56,11 @@ function pickRandomEvent() {
 function nextWeek() {
     week = week + 1;
     weekDisplay.textContent = week;
+
+    money = money + 20;
+    moneyDisplay.textContent = money;
+
+    incomeMessage.textContent = `💵 Income: +$20`;
 
     saveButton.disabled = false;
     spendButton.disabled = false;
