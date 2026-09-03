@@ -89,3 +89,31 @@ button:active {
     margin: 20px auto;
     max-width: 600px;
 }
+
+.finances {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 20px auto;
+    max-width: 900px;
+}
+
+.finance-display {
+    background: linear-gradient(135deg, #FFF8CC, #FFE066, #FFC94A);
+    border: 3px solid #F2B705;
+    border-radius: 15px;
+    padding: 12px 25px;
+    background: rgba(255, 255, 255, 0.45);
+    min-width: 130px;
+}
+
+finance-display h3{
+    margin: 0 0 8px;
+}
+
+.finance-display p {
+    margin: 0;
+    font-size: 26px;
+    font-weight: bold;
+}
