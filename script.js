@@ -16,6 +16,7 @@ let investButton = document.getElementById("invest-button");
 let moneyDisplay = document.getElementById("money-display");
 let nextWeekButton = document.getElementById("next-week-button");
 moneyDisplay.textContent = money;
+backButton.style.display = "none";
 
 let savingsDisplay = document.getElementById("savings-display");
 let spendingDisplay = document.getElementById("spending-display");
@@ -25,6 +26,7 @@ let finishButton = document.getElementById("finish-button");
 let weekDisplay = document.getElementById("week-display");
 let eventDisplay = document.getElementById("event-display");
 let incomeMessage = document.getElementById("income-message");
+const backButton = document.getElementById("back-button");
 
 startButton.addEventListener("click", startGame);
 menuButton.addEventListener("click", returnToMenu);
@@ -34,6 +36,18 @@ giveButton.addEventListener("click", giveMoney);
 investButton.addEventListener("click", investMoney);
 finishButton.addEventListener("click", finishWeek);
 nextWeekButton.addEventListener("click", nextWeek);
+
+backButton.addEventListener("click", function() {
+    backButton.style.display = "none";
+    nextWeekButton.style.display = "none";
+
+    finishButton.disabled = false;
+
+    saveButton.disabled = false;
+    spendButton.disabled = false;
+    giveButton.disabled = false;
+    investButton.disabled = false;
+});
 
 function pickRandomEvent() {
     let randomNumber = Math.floor(Math.random() * events.length);
@@ -77,6 +91,7 @@ function nextWeek() {
 
 function finishWeek() {
     nextWeekButton.style.display = "inline-block";
+    backButton.style.display = "inline-block";
     finishButton.style.display = "none";
 
     saveButton.disabled = true;
@@ -84,6 +99,7 @@ function finishWeek() {
     giveButton.disabled = true;
     investButton.disabled = true;
 }
+
 function saveMoney() {
     if (money >= 5) {
         money = money - 5;
