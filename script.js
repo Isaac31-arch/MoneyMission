@@ -9,11 +9,6 @@ let savings = 0;
 let spending = 0;
 let giving = 0;
 let investments = 0;
-let previousMoney;
-let previousSavings;
-let previousSpending;
-let previousGiving;
-let previousInvestments;
 let saveButton = document.getElementById("save-button");
 let spendButton = document.getElementById("spend-button");
 let giveButton = document.getElementById("give-button");
@@ -21,7 +16,6 @@ let investButton = document.getElementById("invest-button");
 let moneyDisplay = document.getElementById("money-display");
 let nextWeekButton = document.getElementById("next-week-button");
 moneyDisplay.textContent = money;
-backButton.style.display = "none";
 
 let savingsDisplay = document.getElementById("savings-display");
 let spendingDisplay = document.getElementById("spending-display");
@@ -32,6 +26,7 @@ let weekDisplay = document.getElementById("week-display");
 let eventDisplay = document.getElementById("event-display");
 let incomeMessage = document.getElementById("income-message");
 const backButton = document.getElementById("back-button");
+backButton.style.display = "none";
 
 startButton.addEventListener("click", startGame);
 menuButton.addEventListener("click", returnToMenu);
