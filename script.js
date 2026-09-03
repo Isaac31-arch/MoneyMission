@@ -9,6 +9,11 @@ let savings = 0;
 let spending = 0;
 let giving = 0;
 let investments = 0;
+let previousMoney;
+let previousSavings;
+let previousSpending;
+let previousGiving;
+let previousInvestments;
 let saveButton = document.getElementById("save-button");
 let spendButton = document.getElementById("spend-button");
 let giveButton = document.getElementById("give-button");
@@ -40,6 +45,7 @@ nextWeekButton.addEventListener("click", nextWeek);
 backButton.addEventListener("click", function() {
     backButton.style.display = "none";
     nextWeekButton.style.display = "none";
+    finishButton.style.display = "inline-block";
 
     finishButton.disabled = false;
 
