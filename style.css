@@ -1,4 +1,5 @@
 body {
+    /* sets the background of the body to a linear gradient from light yellow to dark yellow */
     background: linear-gradient(135deg, #FFF8CC, #FFE066, #FFC94A);
     margin: 0;
     /* font-family: Arial, sans-serif; */
@@ -6,6 +7,7 @@ body {
 }
 
 #main-menu {
+    /* sets the main menu to take up the full height of the viewport and centers its content */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -80,6 +82,12 @@ button:active {
     position: fixed;
     bottom: 25px;
     right: 25px;
+}
+
+#reset-button {
+    position: absolute;
+    bottom: 20px;
+    right: 260px;
 }
 
 #event-box {
