@@ -54,10 +54,10 @@ button {
 .tagline {
     font-size: 32px;
     font-weight: bold;
-    color: linear-gradient(to right, #1B5E20, #43A047, #D89B00);
-    background-clip: text;
-    color: transparent;
-    margin: 10px 0 35px;
+    /* color: linear-gradient(to right, #1B5E20, #43A047, #D89B00); */
+    color: #1B5E20;
+    margin: -30px 0 35px;
+    transform: translateY(-60px);
 }
 
 button:hover {
