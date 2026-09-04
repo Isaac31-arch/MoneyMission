@@ -31,6 +31,8 @@ let moneyDisplay = document.getElementById("money-display");
 // displays the money amount in the money display element
 let nextWeekButton = document.getElementById("next-week-button");
 // displays the next week button in the next week button element
+let incomeAmount = document.getElementById("income-amount");
+// displays the income amount in the income amount element
 moneyDisplay.textContent = money;
 // displays the money amount in the money display element
 
@@ -113,10 +115,16 @@ function pickRandomEvent() {
     }
 
     moneyDisplay.textContent = money;
+    incomeAmount.textContent = `+$${randomEvent.amount}`;
 }
 
 function resetGame() {
     // resets the game variables and updates the display elements accordingly
+    let restart = confirm("Are you sure you want to reset the game? This will erase all progress.");
+
+    if (restart === false) {
+        return;
+    }
     week = 1;
     money = 20;
     savings = 0;
@@ -130,6 +138,18 @@ function resetGame() {
     spendingDisplay.textContent = spending;
     givingDisplay.textContent = giving;
     investmentsDisplay.textContent = investments;
+
+    eventDisplay.textContent = "A random event will appear here each week after week 1.";
+    incomeMessage.textContent = "💵 Income: +$20";
+
+    nextWeekButton.style.display = "none";
+    finishButton.style.display = "inline-block";
+    backButton.style.display = "none";
+
+    saveButton.disabled = false;
+    spendButton.disabled = false;
+    giveButton.disabled = false;
+    investButton.disabled = false;
 }
 
 function nextWeek() {
