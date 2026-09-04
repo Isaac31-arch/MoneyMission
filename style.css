@@ -11,7 +11,8 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-top: 70px;
     align-items: center;
 }
 
@@ -41,7 +42,7 @@ button {
 #logo {
     width: 800px;
     max-width: 80%;
-    margin-bottom: 20px;
+    margin-bottom: 5%;
     height: auto;
 }
 
@@ -135,4 +136,30 @@ finance-display h3{
     border: 2px solid #c99a3d;
     background-color: white;
     border-radius: 12px;
+}
+
+.menu-features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+
+    width: 85%;
+    margin-top: 40px;
+}
+
+.menu-feature {
+    background: white;
+    border: 3px solid #F2B705;
+    border-radius: 18px;
+    padding: 20px;
+    text-align: center;
+}
+
+.menu-feature h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.menu-feature p {
+    font-size: 18px;
 }
