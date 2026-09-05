@@ -20,6 +20,7 @@ let giving = 0;
 let investments = 0;
 // 📊 EVENTS
 let investmentReturns = [-0.05,0,0.05];
+let investmentMessage = document.getElementById("investment-message");
 // initializes the investmentReturns array with three possible returns: -5%, 0%, and +5%
 let saveButton = document.getElementById("save-button");
 // displays the save button in the save button element
@@ -167,8 +168,16 @@ function nextWeek() {
 
     let investmentReturn = getInvestmentReturn();
     let investmentChange = investments * investmentReturn;
-    investments = investments + investmentChange;
+    investments = Math.round(investments + investmentChange);
     investmentsDisplay.textContent = investments;
+
+    if (investments > 0) {
+        investmentMessage.textContent = "📈Investments went up 5%!";
+    } else if (investments < 0) {
+        investmentMessage.textContent = "📉Investments went down 5%!";
+    } else {
+        investmentMessage.textContent = "➖Investments stayed the same.";
+    }
 
     money = money + 20;
     moneyDisplay.textContent = money;
