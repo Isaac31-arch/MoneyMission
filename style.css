@@ -71,6 +71,13 @@ button:active {
     0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
+.investment-note {
+    font-size: 14px;
+    margin: 6px 0;
+    opacity: 0.75;
+    /* opacity is how transparent something is */
+}
+
 .button-container {
     display: flex;
     flex-direction: row;
