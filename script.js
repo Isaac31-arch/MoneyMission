@@ -21,11 +21,6 @@ let investments = 0;
 // 📊 EVENTS
 let investmentReturns = [-0.05,0,0.05];
 // initializes the investmentReturns array with three possible returns: -5%, 0%, and +5%
-let investmentReturn = getInvestmentReturn();
-// initializes the investmentReturn variable with a random return from the investmentReturns array
-let investmentChange = investments * investmentReturn;
-// initializes the investmentChange variable with the change in investments based on the investmentReturn
-investments = investments + investmentChange;
 let saveButton = document.getElementById("save-button");
 // displays the save button in the save button element
 let spendButton = document.getElementById("spend-button");
@@ -169,6 +164,11 @@ function nextWeek() {
     // increments the week variable by 1 and updates the week display element with the new week number
     week = week + 1;
     weekDisplay.textContent = week;
+
+    let investmentReturn = getInvestmentReturn();
+    let investmentChange = investments * investmentReturn;
+    investments = investments + investmentChange;
+    investmentsDisplay.textContent = investments;
 
     money = money + 20;
     moneyDisplay.textContent = money;
