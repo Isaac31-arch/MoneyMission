@@ -22,6 +22,7 @@ let investments = 0;
 let investmentReturns = [-0.05,0,0.05];
 let investmentMessage = document.getElementById("investment-message");
 // initializes the investmentReturns array with three possible returns: -5%, 0%, and +5%
+let investmentDisplay = document.getElementById("investments-display");
 let saveButton = document.getElementById("save-button");
 // displays the save button in the save button element
 let spendButton = document.getElementById("spend-button");
