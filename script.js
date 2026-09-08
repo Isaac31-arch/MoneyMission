@@ -47,6 +47,7 @@ let declineEventButton = document.getElementById("decline-event");
 // displays the decline event button in the decline event button element
 let happinessDisplay = document.getElementById("happiness-display");
 // displays the happiness amount in the happiness display element
+let happinessFill = document.getElementById("happiness-fill");
 moneyDisplay.textContent = money;
 // displays the money amount in the money display element
 
@@ -148,6 +149,11 @@ acceptEventButton.addEventListener("click", function() {
     moneyDisplay.textContent = money;
     eventChoices.style.display = "none";
 });
+
+function updateHappiness() {
+    happinessDisplay.textContent = happiness;
+    happinessFill.style.width = happiness + "%";
+}
 
 function resetGame() {
     // resets the game variables and updates the display elements accordingly
