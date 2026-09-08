@@ -21,6 +21,7 @@ let investments = 0;
 // 📊 EVENTS
 let investmentReturns = [-0.05,0,0.05];
 let currentEvent;
+let happiness = 50;
 let investmentMessage = document.getElementById("investment-message");
 // initializes the investmentReturns array with three possible returns: -5%, 0%, and +5%
 let investmentDisplay = document.getElementById("investments-display");
@@ -44,6 +45,8 @@ let acceptEventButton = document.getElementById("accept-event");
 // displays the accept event button in the accept event button element
 let declineEventButton = document.getElementById("decline-event");
 // displays the decline event button in the decline event button element
+let happinessDisplay = document.getElementById("happiness-display");
+// displays the happiness amount in the happiness display element
 moneyDisplay.textContent = money;
 // displays the money amount in the money display element
 
