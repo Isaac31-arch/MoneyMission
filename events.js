@@ -58,6 +58,11 @@ let events = [
         amount: 5
     },
     {
+    text: "🎮 A new game you want costs $20.",
+        type: "choice",
+        amount: 20
+    },
+    {
         text: "🎧 Your headphones broke. Replacing them costs $10.",
         type: "expense",
         amount: 10

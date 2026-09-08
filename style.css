@@ -51,6 +51,10 @@ button {
     text-align: center;
 }
 
+#event-choices {
+    display: none;
+}
+
 .tagline {
     font-size: 32px;
     font-weight: bold;

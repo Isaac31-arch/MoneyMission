@@ -37,6 +37,12 @@ let nextWeekButton = document.getElementById("next-week-button");
 // displays the next week button in the next week button element
 let incomeAmount = document.getElementById("income-amount");
 // displays the income amount in the income amount element
+let eventChoices = document.getElementById("event-choices");
+// displays the event choices in the event choices element
+let acceptEventButton = document.getElementById("accept-event");
+// displays the accept event button in the accept event button element
+let declineEventButton = document.getElementById("decline-event");
+// displays the decline event button in the decline event button element
 moneyDisplay.textContent = money;
 // displays the money amount in the money display element
 
@@ -115,6 +121,9 @@ function pickRandomEvent() {
 
     eventDisplay.textContent = randomEvent.text;
 
+    if(randomEvent.type === "choice") {
+        eventChoices.style.display = "block";
+    }
     if (randomEvent.type === "income") {
         money = money + randomEvent.amount;
         incomeMessage.textContent = `You received $${randomEvent.amount}!`;
