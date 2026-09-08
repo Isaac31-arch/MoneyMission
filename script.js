@@ -130,6 +130,8 @@ function pickRandomEvent() {
 
     if(randomEvent.type === "choice") {
         eventChoices.style.display = "block";
+    } else {
+        eventChoices.style.display = "none";
     }
     if (randomEvent.type === "income") {
         money = money + randomEvent.amount;
@@ -146,8 +148,16 @@ function pickRandomEvent() {
 
 acceptEventButton.addEventListener("click", function() {
     money = money - currentEvent.amount;
+    happiness = happiness + 10;
     moneyDisplay.textContent = money;
     eventChoices.style.display = "none";
+    updateHappiness();
+});
+
+declineEventButton.addEventListener("click", function() {
+    happiness = happiness - 10;
+    eventChoices.style.display = "none";
+    updateHappiness();
 });
 
 function updateHappiness() {
