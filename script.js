@@ -20,6 +20,7 @@ let giving = 0;
 let investments = 0;
 // 📊 EVENTS
 let investmentReturns = [-0.05,0,0.05];
+let currentEvent;
 let investmentMessage = document.getElementById("investment-message");
 // initializes the investmentReturns array with three possible returns: -5%, 0%, and +5%
 let investmentDisplay = document.getElementById("investments-display");
@@ -119,6 +120,8 @@ function pickRandomEvent() {
     let randomNumber = Math.floor(Math.random() * events.length);
     let randomEvent = events[randomNumber];
 
+    currentEvent = randomEvent;
+
     eventDisplay.textContent = randomEvent.text;
 
     if(randomEvent.type === "choice") {
@@ -136,6 +139,12 @@ function pickRandomEvent() {
     moneyDisplay.textContent = money;
     incomeAmount.textContent = `+$${randomEvent.amount}`;
 }
+
+acceptEventButton.addEventListener("click", function() {
+    money = money - currentEvent.amount;
+    moneyDisplay.textContent = money;
+    eventChoices.style.display = "none";
+});
 
 function resetGame() {
     // resets the game variables and updates the display elements accordingly
