@@ -169,6 +169,10 @@ function updateHappiness() {
     }
     happinessDisplay.textContent = happiness;
     happinessFill.style.width = happiness + "%";
+
+    if (happiness <= 20) {
+        happinessDisplay.textContent = happiness + "⚠️"
+    }
 }
 
 function resetGame() {
