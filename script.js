@@ -161,6 +161,12 @@ declineEventButton.addEventListener("click", function() {
 });
 
 function updateHappiness() {
+
+    if (happiness > 100) {
+        happiness = 100;
+    } else if (happiness < 0) {
+        happiness = 0;
+    }
     happinessDisplay.textContent = happiness;
     happinessFill.style.width = happiness + "%";
 }
