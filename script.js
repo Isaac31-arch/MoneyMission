@@ -148,7 +148,7 @@ function pickRandomEvent() {
 
 acceptEventButton.addEventListener("click", function() {
     money = money - currentEvent.amount;
-    happiness = happiness + 10;
+    happiness = happiness + currentEvent.happiness;
     moneyDisplay.textContent = money;
     eventChoices.style.display = "none";
     updateHappiness();

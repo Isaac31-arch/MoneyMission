@@ -63,29 +63,34 @@ let events = [
         amount: 20
     },
     {
-    text: "🍕 Your friends are getting pizza. It costs $10.",
-    type: "choice",
-    amount: 10
+        text: "🍕 Your friends are getting pizza. It costs $10.",
+        type: "choice",
+        amount: 10,
+        happiness: 5
     },
     {
     text: "🎬 You want to see a movie. A ticket costs $15.",
-    type: "choice",
-    amount: 15
+        type: "choice",
+        amount: 15,
+        happiness: 10
     },
     {
-    text: "👕 You found a shirt you really like for $25.",
-    type: "choice",
-    amount: 25
+        text: "👕 You found a shirt you really like for $25.",
+        type: "choice",
+        amount: 25,
+        happiness: 15
     },
     {
-    text: "🎮 A new game you want costs $30.",
-    type: "choice",
-    amount: 30
+        text: "🎮 A new game you want costs $30.",
+        type: "choice",
+        amount: 30,
+        happiness: 20
     },
     {
-    text: "🍦 You want to get ice cream with your friends for $5.",
-    type: "choice",
-    amount: 5
+        text: "🍦 You want to get ice cream with your friends for $5.",
+        type: "choice",
+        amount: 5,
+        happiness: 5
     },
     {
         text: "🎧 Your headphones broke. Replacing them costs $10.",
