@@ -125,24 +125,27 @@ function pickRandomEvent() {
         return event.minweek === undefined || event.minweek <= week;
     });
 
-    availableEvents = availableEvents.filter(function(event) {
-        // filters the available events array to only include events that are available based on their weight
-        if (event.weight === undefined) {
-            return true;
-        }
+    let totalChance = 0;
 
-        return Math.random() < 1/event.weight;
+    availableEvents.forEach(function(event) {
+        let weight = event.weight || 1; // default weight is 1 if not specified
+        totalChance = totalChance + (1/weight);
     });
 
-    if (availableEvents.length === 0) {
-        availableEvents = events.filter(function(event) {
-            return event.minweek === undefined || event.minweek <= week;
-        });
-    }
+    let randomChance = Math.random() * totalChance;
 
-    // picks a random event from the events array and updates the event display and money amount accordingly
-    let randomNumber = Math.floor(Math.random() * availableEvents.length);
-    let randomEvent = availableEvents[randomNumber];
+    let randomEvent;
+
+    for (let event of availableEvents) {
+        let weight = event.weight || 1;
+
+        randomChance = randomChance - (1/weight);
+
+        if (randomChance <= 0) {
+            randomEvent = event;
+            break;
+        }
+    }
 
     currentEvent = randomEvent;
 
