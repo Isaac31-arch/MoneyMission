@@ -55,19 +55,21 @@ let events = [
     {
         text: "🚲 Your bike needs a repair. It costs $25.",
         type: "expense",
-        amount: 25
+        amount: 25,
+        minweek: 4,
+        weight: 3
     },
     {
         text: "🍕 Your friends are getting pizza. It costs $10.",
         type: "choice",
         amount: 10,
-        happiness: 25
+        happiness: 25,
     },
     {
     text: "🎬 You want to see a movie. A ticket costs $15.",
         type: "choice",
         amount: 15,
-        happiness: 25
+        happiness: 25,
     },
     {
         text: "👕 You found a shirt you really like for $25.",
@@ -90,57 +92,72 @@ let events = [
     {
         text: "🎧 Your headphones broke. Replacing them costs $10.",
         type: "expense",
-        amount: 10
+        amount: 10,
+        weight: 1
     },
     {
         text: "📚 You need new school supplies. They cost $5.",
         type: "expense",
-        amount: 5
+        amount: 5,
+        weight: 1
     },
     {
         text: "🚌 You need to pay $5 for transportation.",
         type: "expense",
-        amount: 5
+        amount: 5,
+        weight: 1
     },
     {
         text: "🍕 You bought food while you were out. It costs $10.",
         type: "expense",
-        amount: 10
+        amount: 10,
+        weight: 1
     },
     {
         text: "⚽ You need some new sports equipment. Pay $10.",
         type: "expense",
-        amount: 10
+        amount: 10,
+        weight: 1
     },
     {
         text: "🔌 Your charging cable broke. A replacement costs $20.",
         type: "expense",
-        amount: 20
+        amount: 20,
+        weight: 2
     },
     {
         text: "🎒 Your backpack ripped. A replacement costs $30.",
         type: "expense",
-        amount: 30
+        amount: 30,
+        minWeek: 4,
+        weight: 3
     },
     {
         text: "✏️ You lost some school supplies. Replacements cost $20.",
         type: "expense",
-        amount: 20
+        amount: 20,
+        weight: 2
     },
     {
         text: "💻 You need a small computer accessory for school. Pay $30.",
         type: "expense",
-        amount: 30
+        amount: 30,
+        minweek: 4,
+        weight: 3
     },
     {
-        text: "📱 Your phone screen cracks. Repairs cost $35.",
+        text: "📱 Your phone screen cracks. Repairs cost $50.",
         type: "expense",
-        amount: 35
+        amount: 50,
+        minweek: 5,
+        weight: 5
     },
     {
         text: "🏥 You have an unexpected medical expense of $45.",
         type: "expense",
-        amount: 45
+        amount: 45,
+        minweek: 5,
+        weight: 5
     },
 
     // 📈 INVESTMENT EVENTS
