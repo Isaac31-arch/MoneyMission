@@ -53,44 +53,39 @@ let events = [
 
     // 💸 EXPENSE EVENTS
     {
-        text: "🚲 Your bike needs a repair. It costs $5.",
+        text: "🚲 Your bike needs a repair. It costs $25.",
         type: "expense",
-        amount: 5
-    },
-    {
-    text: "🎮 A new game you want costs $20.",
-        type: "choice",
-        amount: 20
+        amount: 25
     },
     {
         text: "🍕 Your friends are getting pizza. It costs $10.",
         type: "choice",
         amount: 10,
-        happiness: 5
+        happiness: 25
     },
     {
     text: "🎬 You want to see a movie. A ticket costs $15.",
         type: "choice",
         amount: 15,
-        happiness: 10
+        happiness: 25
     },
     {
         text: "👕 You found a shirt you really like for $25.",
         type: "choice",
         amount: 25,
-        happiness: 15
+        happiness: 25
     },
     {
         text: "🎮 A new game you want costs $30.",
         type: "choice",
         amount: 30,
-        happiness: 20
+        happiness: 25
     },
     {
         text: "🍦 You want to get ice cream with your friends for $5.",
         type: "choice",
         amount: 5,
-        happiness: 5
+        happiness: 25
     },
     {
         text: "🎧 Your headphones broke. Replacing them costs $10.",
@@ -108,9 +103,9 @@ let events = [
         amount: 5
     },
     {
-        text: "🍕 You bought food while you were out. It costs $5.",
+        text: "🍕 You bought food while you were out. It costs $10.",
         type: "expense",
-        amount: 5
+        amount: 10
     },
     {
         text: "⚽ You need some new sports equipment. Pay $10.",
@@ -118,24 +113,34 @@ let events = [
         amount: 10
     },
     {
-        text: "🔌 Your charging cable broke. A replacement costs $5.",
+        text: "🔌 Your charging cable broke. A replacement costs $20.",
         type: "expense",
-        amount: 5
+        amount: 20
     },
     {
-        text: "🎒 Your backpack ripped. A replacement costs $10.",
+        text: "🎒 Your backpack ripped. A replacement costs $30.",
         type: "expense",
-        amount: 10
+        amount: 30
     },
     {
-        text: "✏️ You lost some school supplies. Replacements cost $5.",
+        text: "✏️ You lost some school supplies. Replacements cost $20.",
         type: "expense",
-        amount: 5
+        amount: 20
     },
     {
-        text: "💻 You need a small computer accessory for school. Pay $10.",
+        text: "💻 You need a small computer accessory for school. Pay $30.",
         type: "expense",
-        amount: 10
+        amount: 30
+    },
+    {
+        text: "📱 Your phone screen cracks. Repairs cost $35.",
+        type: "expense",
+        amount: 35
+    },
+    {
+        text: "🏥 You have an unexpected medical expense of $45.",
+        type: "expense",
+        amount: 45
     },
 
     // 📈 INVESTMENT EVENTS

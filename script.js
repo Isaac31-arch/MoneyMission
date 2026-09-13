@@ -214,6 +214,12 @@ function nextWeek() {
     week = week + 1;
     weekDisplay.textContent = week;
 
+    if (money < 0) {
+        alert("Game Over! You have run out of money.");
+        resetGame();
+        return;
+    }
+
     let investmentReturn = getInvestmentReturn();
     let investmentChange = investments * investmentReturn;
     investments = Math.round(investments + investmentChange);
