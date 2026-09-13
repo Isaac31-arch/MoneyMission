@@ -120,9 +120,14 @@ backButton.addEventListener("click", function() {
 });
 
 function pickRandomEvent() {
+    let availableEvents = events.filter(function(event) {
+        // filters the events array to only include events that are available based on the current week
+        return event.minweek<= week;
+    });
+
     // picks a random event from the events array and updates the event display and money amount accordingly
-    let randomNumber = Math.floor(Math.random() * events.length);
-    let randomEvent = events[randomNumber];
+    let randomNumber = Math.floor(Math.random() * availableEvents.length);
+    let randomEvent = availableEvents[randomNumber];
 
     currentEvent = randomEvent;
 
