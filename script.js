@@ -125,6 +125,21 @@ function pickRandomEvent() {
         return event.minweek === undefined || event.minweek <= week;
     });
 
+    availableEvents = availableEvents.filter(function(event) {
+        // filters the available events array to only include events that are available based on their weight
+        if (event.weight === undefined) {
+            return true;
+        }
+
+        return Math.random() < 1/event.weight;
+    });
+
+    if (availableEvents.length === 0) {
+        availableEvents = events.filter(function(event) {
+            return event.minweek === undefined || event.minweek <= week;
+        });
+    }
+
     // picks a random event from the events array and updates the event display and money amount accordingly
     let randomNumber = Math.floor(Math.random() * availableEvents.length);
     let randomEvent = availableEvents[randomNumber];
