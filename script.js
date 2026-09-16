@@ -184,6 +184,7 @@ declineEventButton.addEventListener("click", function() {
 });
 
 function updateHappiness() {
+    console.log("updateHappiness ran. Happiness is currently: " + happiness);
 
     if (happiness > 100) {
         happiness = 100;
