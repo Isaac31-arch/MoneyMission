@@ -6,21 +6,6 @@ let events = [
         amount: 10
     },
     {
-        text: "🧹 You did extra chores and earned $5.",
-        type: "income",
-        amount: 5
-    },
-    {
-        text: "🐕 You walked your neighbor's dog and earned $10.",
-        type: "income",
-        amount: 10
-    },
-    {
-        text: "🎮 You sold an old video game for $10.",
-        type: "income",
-        amount: 10
-    },
-    {
         text: "💵 You received an extra $5 in allowance.",
         type: "income",
         amount: 5
@@ -114,12 +99,6 @@ let events = [
         weight: 1
     },
     {
-        text: "⚽ You need some new sports equipment. Pay $10.",
-        type: "expense",
-        amount: 10,
-        weight: 1
-    },
-    {
         text: "🔌 Your charging cable broke. A replacement costs $20.",
         type: "expense",
         amount: 20,
@@ -131,12 +110,6 @@ let events = [
         amount: 30,
         minWeek: 4,
         weight: 3
-    },
-    {
-        text: "✏️ You lost some school supplies. Replacements cost $20.",
-        type: "expense",
-        amount: 20,
-        weight: 2
     },
     {
         text: "💻 You need a small computer accessory for school. Pay $30.",
