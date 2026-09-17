@@ -184,7 +184,12 @@ declineEventButton.addEventListener("click", function() {
 });
 
 function updateHappiness() {
-    console.log("updateHappiness ran. Happiness is currently: " + happiness);
+
+    if (happiness === 0) {
+        alert("Game Over! Your happiness has dropped to 0.");
+        resetGame();
+        return;
+    }
 
     if (happiness > 100) {
         happiness = 100;
