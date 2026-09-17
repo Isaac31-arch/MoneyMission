@@ -155,6 +155,7 @@ function pickRandomEvent() {
 
     if(randomEvent.type === "choice") {
         eventChoices.style.display = "block";
+        finishButton.disabled = true;
     } else {
         eventChoices.style.display = "none";
     }
@@ -176,12 +177,14 @@ acceptEventButton.addEventListener("click", function() {
     happiness = happiness + currentEvent.happiness;
     moneyDisplay.textContent = money;
     eventChoices.style.display = "none";
+    finishButton.disabled = false;
     updateHappiness();
 });
 
 declineEventButton.addEventListener("click", function() {
     happiness = happiness - 10;
     eventChoices.style.display = "none";
+    finishButton.disabled = false;
     updateHappiness();
 });
 
