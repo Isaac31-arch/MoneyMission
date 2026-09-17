@@ -35,6 +35,8 @@ let investButton = document.getElementById("invest-button");
 // displays the save, spend, give, and invest buttons in the respective button elements
 let moneyDisplay = document.getElementById("money-display");
 // displays the money amount in the money display element
+let happinessEmoji = document.getElementById("happiness-emoji");
+// displays the happiness emoji in the happiness emoji element
 let nextWeekButton = document.getElementById("next-week-button");
 // displays the next week button in the next week button element
 let incomeAmount = document.getElementById("income-amount");
@@ -200,7 +202,9 @@ function updateHappiness() {
     happinessFill.style.width = happiness + "%";
 
     if (happiness <= 20) {
-        happinessDisplay.textContent = happiness + "⚠️"
+        happinessEmoji.textContent = happiness + "⚠️";
+    } else {
+        happinessEmoji.textContent = "😊";
     }
 }
 
