@@ -217,6 +217,7 @@ function resetGame() {
     spending = 0;
     giving = 0;
     investments = 0;
+    happiness = 50; 
 
     weekDisplay.textContent = week;
     moneyDisplay.textContent = money;
@@ -224,6 +225,7 @@ function resetGame() {
     spendingDisplay.textContent = spending;
     givingDisplay.textContent = giving;
     investmentsDisplay.textContent = investments;
+    happinessDisplay.textContent = happiness;
 
     eventDisplay.textContent = "A random event will appear here each week after week 1.";
     incomeMessage.textContent = "💵 Income: +$20";
@@ -231,6 +233,7 @@ function resetGame() {
     nextWeekButton.style.display = "none";
     finishButton.style.display = "inline-block";
     backButton.style.display = "none";
+    happinessFill.style.width = happiness + "%";
 
     saveButton.disabled = false;
     spendButton.disabled = false;
