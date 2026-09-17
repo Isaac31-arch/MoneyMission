@@ -202,7 +202,7 @@ function updateHappiness() {
     happinessFill.style.width = happiness + "%";
 
     if (happiness <= 20) {
-        happinessEmoji.textContent = happiness + "⚠️";
+        happinessEmoji.textContent = "⚠️";
     } else {
         happinessEmoji.textContent = "😊";
     }
