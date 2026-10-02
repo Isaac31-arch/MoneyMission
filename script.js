@@ -182,7 +182,7 @@ acceptEventButton.addEventListener("click", function() {
 });
 
 declineEventButton.addEventListener("click", function() {
-    happiness = happiness - 10;
+    happiness = happiness - currentEvent.happiness;
     eventChoices.style.display = "none";
     finishButton.disabled = false;
     updateHappiness();
@@ -190,17 +190,18 @@ declineEventButton.addEventListener("click", function() {
 
 function updateHappiness() {
 
-    if (happiness === 0) {
-        alert("Game Over! Your happiness has dropped to 0.");
-        resetGame();
-        return;
-    }
-
     if (happiness > 100) {
         happiness = 100;
     } else if (happiness < 0) {
         happiness = 0;
     }
+
+    if (happiness === 0) {
+        alert("Game Over! Your happiness has dropped to 0.");
+        resetGame();
+        return;
+    }
+    
     happinessDisplay.textContent = happiness;
     happinessFill.style.width = happiness + "%";
 
