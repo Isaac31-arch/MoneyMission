@@ -149,6 +149,8 @@ function pickRandomEvent() {
         }
     }
 
+}
+
     currentEvent = randomEvent;
 
     eventDisplay.textContent = randomEvent.text;
@@ -165,12 +167,25 @@ function pickRandomEvent() {
     }
 
     if (randomEvent.type === "expense") {
-        money = money - randomEvent.amount;
+
+    if (money + savings < randomEvent.amount) {
+        alert("Game Over! You don't have enough money to cover this expense.");
+        resetGame();
+        return;
     }
 
-    moneyDisplay.textContent = money;
-    incomeAmount.textContent = `+$${randomEvent.amount}`;
-}
+    if (money >= randomEvent.amount) {
+        money = money - randomEvent.amount;
+
+    } else {
+        let amountNeeded = randomEvent.amount - money;
+
+        money = 0;
+        savings = savings - amountNeeded;
+    }
+
+    savingsDisplay.textContent = savings;
+    }
 
 acceptEventButton.addEventListener("click", function() {
     money = money - currentEvent.amount;
@@ -201,7 +216,7 @@ function updateHappiness() {
         resetGame();
         return;
     }
-    
+
     happinessDisplay.textContent = happiness;
     happinessFill.style.width = happiness + "%";
 
