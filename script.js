@@ -149,7 +149,6 @@ function pickRandomEvent() {
         }
     }
 
-}
 
     currentEvent = randomEvent;
 
@@ -186,7 +185,7 @@ function pickRandomEvent() {
 
     savingsDisplay.textContent = savings;
     }
-
+}
 acceptEventButton.addEventListener("click", function() {
     money = money - currentEvent.amount;
     happiness = happiness + currentEvent.happiness;
